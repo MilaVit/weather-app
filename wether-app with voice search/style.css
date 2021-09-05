@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#current-weather-details {
+    background-image: url(img/oblaka-1.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.load-container{
+	position:relative;
+    top: 50%;
+    visibility: hidden;
+
+}
+	
+.whirlpool,
+.whirlpool::before,
+.whirlpool::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 1px solid rgb(204,204,204);
+	border-left-color: rgb(0,0,0);
+	border-radius: 974px;
+		-o-border-radius: 974px;
+		-ms-border-radius: 974px;
+		-webkit-border-radius: 974px;
+		-moz-border-radius: 974px;
+}
+.whirlpool {
+	margin: -24px 0 0 -24px;
+	height: 49px;
+	width: 49px;
+	animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+}
+.whirlpool::before {
+	content: "";
+	margin: -22px 0 0 -22px;
+	height: 43px;
+	width: 43px;
+	animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+}
+.whirlpool::after {
+	content: "";
+	margin: -28px 0 0 -28px;
+	height: 55px;
+	width: 55px;
+	animation: cssload-rotate 2300ms linear infinite;
+		-o-animation: cssload-rotate 2300ms linear infinite;
+		-ms-animation: cssload-rotate 2300ms linear infinite;
+		-webkit-animation: cssload-rotate 2300ms linear infinite;
+		-moz-animation: cssload-rotate 2300ms linear infinite;
+}
+ @keyframes cssload-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@-o-keyframes cssload-rotate {
+	100% {
+		-o-transform: rotate(360deg);
+	}
+} 
+@-ms-keyframes cssload-rotate {
+	100% {
+		-ms-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes cssload-rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-moz-keyframes cssload-rotate {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+.color-background {
+    background-color: rgba(73, 73, 73, 0.672);
+    width: 100vw;
+    height: 100vh;
+}
+.container {
+    width: 700px;
+    height: 300px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 6px 4px 10px 15px #80d4ddc7;
+    background-color: rgba(255, 255, 255, 0.467);
+}
+.country {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    font-size: 20px;
+}
+.city {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%,-3%);
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.getTemperature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    height: 20px;
+    position: relative;
+    top: 40%;
+    left: -14%;
+}
+.getTemperature p {
+    font-size: 12px;
+    font-style: italic;
+}
+.getTemperature #minTemp {
+    padding-right: 5px;
+    border-right: 1px solid black;
+}
+.getTemperature #maxTemp {
+    padding-left: 5px;
+}
+.getTemperature img {
+    width: 40px;
+    height: 40px;
+}
+.getTemperature img {
+    display: none;
+}
+
+.textCity form {
+    width: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 11px;
+    margin-right: 0px;
+}
+.textCity input[type="text"] {
+    width: 50px;
+    height: 30px;
+    padding-left: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #F9F0DA;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    transition: .3s linear;
+}
+.textCity input:focus {
+    width: 150px;
+}
+.textCity input[type="button"] {
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 2px;
+    cursor: pointer;
+    display: none;
+}
+
+ #textVoice {
+    background: none;
+    border: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+ #textVoice img {
+    width: 20px;
+    height: 20px;
+}
+
+.list{
+    display: flex;
+    position: relative;
+    top: 58%;
+    left: 10%;
+    height: 50px;
+    width: 250px;
+}
+#list {
+    display: none;
+}
+ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
+li {
+    margin-left: 40px;
+    padding: 15px;
+    list-style: none;
+    text-align: center;
+}
+li:first-child {
+    margin-left: 30px;
+}
+li span {
+   font-weight: 700;
+   font-size: 16px; 
+}
+li p {
+    font-size: 14px;
+    font-style: italic;
+}
+.weather {
+    display: inline-block;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+}
+
+.weather button {
+    border: none;
+    background:none;
+}
+.weather button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+}
+li img,
+.weather > button > img  {
+    width: 30px;
+    height: 30px;
+}

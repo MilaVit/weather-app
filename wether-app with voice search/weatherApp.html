@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather-App</title>
+</head>
+<body>
+
+<main id="current-weather-details">
+    <div class="load-container" id="loader">
+        <div class="whirlpool"></div>
+    </div>
+
+<div class="color-background">
+    <div class="container">
+
+        <div id="location-city-country">
+            <div class="country">
+                <p id="country"></p>
+            </div>
+            <div class="city">
+                <p id="city"></p>
+                    <div class="getTemperature" id="getTemperature">
+                        <img id="weather" src="" alt="iconWeather">
+                        <p id="minTemp"></p>
+                        <p id="maxTemp"></p>
+                    </div>
+            </div>
+        </div>
+
+        <div class="textCity">
+            <form>
+                <button id="textVoice" type="button">
+                    <img src="https://img.icons8.com/ios/50/000000/microphone.png"/>
+                </button>
+                <input id="textCity" type="text" placeholder="enter your city...">
+                <input id="textBtn" type="button" value="&#128269">
+            </form>
+        </div>
+            
+        <div class="list" id="list">  
+            <ul>
+                <li>
+                    <img src="img/windi.png" alt="humid"><br>
+                    <span>Humidity:</span>
+                    <p id="current-humidity"></p>
+                </li>
+                <li>
+                    <img src="img/pressure.png" alt="presssure"><br>
+                    <span>Pressure:</span><br>
+                    <p id="current-pressure"></p>
+                </li>
+                <li>
+                    <img src="img/temp.png" alt="temperature"><br>
+                    <span>Temperature:</span>
+                    <p id="current-temperature"></p>
+                </li>
+                <li>
+                    <img src="img/humid.png" alt="windi"><br>
+                    <span>Windi:</span>
+                    <p id="current-wind-speed"></p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="weather">
+            <button id="getWeather" title="your location!">
+                <img src="img/location.png" class="location" alt="location">
+            </button>
+        </div>
+        </div>
+    </div>
+</main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
